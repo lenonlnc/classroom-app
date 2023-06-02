@@ -1,7 +1,7 @@
 import Card from '@/components/genericCard'
 import Filter from '@/components/genericFilter'
 import Navbar from '@/components/navbar'
-
+import { courses } from '../../data/courses'
 export default function () {
     return (
         <div className="flex flex-col">
@@ -15,8 +15,10 @@ export default function () {
                     <Filter />
                 </div>
 
-                <div className=" w-max grid grid-cols-4 gap-10">
-                    <Card />
+                <div className=" w-max grid grid-cols-5 gap-6">
+                    {courses.map((course) => {
+                        return <Card />
+                    })}
                 </div>
             </div>
         </div>
