@@ -1,6 +1,6 @@
 export default function () {
   return (
-    <div className="h-screen flex items-center flex-col justify-center gap-4">
+    <div className="h-screen flex items-center flex-col justify-center gap-4 ">
       <div className="font-semibold text-3xl">
         <h1>Iniciar sessão</h1>
       </div>
