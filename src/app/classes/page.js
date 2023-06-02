@@ -11,7 +11,7 @@ export default function () {
             {/* conteúdo */}
             <div className="p-20 flex flex-col gap-10">
                 <div className="flex items-center gap-4">
-                    <p className="font-bold text-3xl">Cursos</p>
+                    <p className="font-bold text-3xl flex-1">Cursos</p>
                     <Filter />
                 </div>
 
