@@ -8,8 +8,10 @@ export default function Navbar() {
                 name="search"
                 placeholder="pesquisar por curso"
             />
-            <div className="flex items-center gap-4">
-                <div className="bg-violet-900 rounded-full p-6"></div>
+            <div className="">
+                <div className="bg-violet-900 py-1 cursor-pointer rounded-full w-10 h-10 flex-items-center flex justify-center">
+                    <p className="text-white font-bold text-xl">L</p>
+                </div>
             </div>
         </div>
     )
