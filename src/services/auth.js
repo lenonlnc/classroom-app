@@ -16,8 +16,7 @@ export async function recoverUserData() {
     return {
         user: {
             name: 'Lenon Lencina',
-            email: 'lenonlara1@gmail.com',
-            avatar_url: 'https://github.com/lenonlnc.png'
+            email: 'lenonlara1@gmail.com'
         }
     }
 }

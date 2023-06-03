@@ -37,7 +37,6 @@ export default function Filter() {
                         </option>
                     ))}
             </select>
-            <div className="bg-violet-500 hover:bg-violet-700 transition duration-150s ease-in rounded p-4 text-white">Resetar filtros</div>
         </div>
     )
 }

@@ -38,7 +38,7 @@ export const classes = [
     {
         id: 4,
         name: 'Análise de dados',
-        dificulty_level: 5,
+        dificulty_level: 2,
         description:
             'Esta aula visa a melhoria das habilidades do aluno das mais diversas áreas do mercado de trabalho. Possibilitando um amplo entendimento de suas respectivas áreas',
         image: '/data-analisys.webp',
@@ -50,7 +50,7 @@ export const classes = [
     {
         id: 5,
         name: 'Administração',
-        dificulty_level: 3.2,
+        dificulty_level: 3,
         description:
             'Esta aula visa a melhoria das habilidades do aluno das mais diversas áreas do mercado de trabalho. Possibilitando um amplo entendimento de suas respectivas áreas',
         image: '/admin.jpeg',
@@ -74,7 +74,7 @@ export const classes = [
     {
         id: 7,
         name: 'Design',
-        dificulty_level: 4.5,
+        dificulty_level: 4,
         description:
             'Esta aula visa a melhoria das habilidades do aluno das mais diversas áreas do mercado de trabalho. Possibilitando um amplo entendimento de suas respectivas áreas',
         image: '/design.jpg',
@@ -86,7 +86,7 @@ export const classes = [
     {
         id: 8,
         name: 'UI/UX',
-        dificulty_level: 4.5,
+        dificulty_level: 4,
         description:
             'Esta aula visa a melhoria das habilidades do aluno das mais diversas áreas do mercado de trabalho. Possibilitando um amplo entendimento de suas respectivas áreas',
         image: '/ux.png',

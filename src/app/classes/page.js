@@ -1,6 +1,6 @@
 'use client'
 import Card from '@/components/genericCard'
-import Filter, { handleCategory } from '@/components/genericFilter'
+import Filter from '@/components/genericFilter'
 import Navbar from '@/components/navbar'
 import { classes } from '../../data/classes'
 import { useContext, useState } from 'react'
@@ -21,7 +21,7 @@ export default function () {
     })
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col  mx-auto">
             {/* navbar */}
             <Navbar user={user} />
             {/* conteúdo */}
@@ -33,15 +33,15 @@ export default function () {
                 <hr className="bg-zinc-200 h-0 w-full" />
 
                 {classes && (
-                    <div className=" w-max grid grid-cols-5 gap-6">
+                    <div className="w-max grid grid-cols-5  min-h-screen  gap-6">
                         {activeFilter
                             ? classes.map((lesson) => {
-                                  if (lesson.category == filter) {
-                                      return <Card lesson={lesson} />
+                                  if (lesson.category == filter || lesson.dificulty_level == filter) {
+                                      return <Card key={lesson.id} lesson={lesson} />
                                   }
                               })
                             : classes.map((lesson) => {
-                                  return <Card lesson={lesson} />
+                                  return <Card key={lesson.id} lesson={lesson} />
                               })}
                     </div>
                 )}

@@ -11,7 +11,7 @@ export default function Card({ lesson }) {
     return (
         <div
             onClick={() => goToLesson(lesson.id)}
-            className="flex flex-col gap-4 shadow-md p-6 group bg-white hover:bg-violet-50 cursor-pointer transition ease-in duration-150s "
+            className="flex  flex-col gap-4 shadow-md p-6 group bg-white hover:bg-violet-50 cursor-pointer transition ease-in duration-150s "
         >
             {/* image */}
             <Image className="rounded" src={lesson.image} width={384} height={150} alt="Couse image" />

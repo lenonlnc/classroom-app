@@ -2,8 +2,11 @@
 import { useForm } from 'react-hook-form'
 import { useContext } from 'react'
 import { AuthContext } from '@/contexts/context'
+import { useRouter } from 'next/navigation'
 export default function Home() {
     const { register, handleSubmit } = useForm()
+
+    const router = useRouter()
 
     const { logIn } = useContext(AuthContext)
     async function handleSignIn(data) {
@@ -12,6 +15,10 @@ export default function Home() {
         } catch (e) {
             console.log(`Authenthication error. ERR:${e}`)
         }
+    }
+
+    function redefinePassword() {
+        router.push('/password-recover')
     }
 
     return (
@@ -42,7 +49,9 @@ export default function Home() {
             <div className="cursor-pointer bg-violet-500 text-white p-4 rounded w-96 flex items-center justify-center" onClick={handleSubmit(handleSignIn)}>
                 Login
             </div>
-            <a className="text-violet-400 cursor-pointer hover:text-violet-600">Esqueceu sua senha?</a>
+            <a onClick={redefinePassword} className="text-violet-400 cursor-pointer hover:text-violet-600">
+                Esqueceu sua senha?
+            </a>
         </div>
     )
 }

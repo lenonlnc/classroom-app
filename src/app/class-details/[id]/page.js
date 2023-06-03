@@ -3,10 +3,12 @@ import Navbar from '@/components/navbar'
 import { classes } from '../../../data/classes'
 import Image from 'next/image'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 export default function Details({ params }) {
     params: {
         id: Number
     }
+    const router = useRouter()
 
     const [favorite, setFavorite] = useState(false)
     function setAsFavorite() {
@@ -15,14 +17,20 @@ export default function Details({ params }) {
 
     let selectedLesson = classes.find((c) => c.id == params.id)
 
+    function returnToPrevious() {
+        router.push('/classes')
+    }
     return (
         <div className="flex flex-col">
             {/* navbar */}
             <Navbar />
             {/* conteúdo */}
             <div className="flex flex-col gap-10">
-                <div className=" bg-gradient-to-r w-full h-96 from-violet-500 to-fuchsia-500 p-10 flex ">
-                    <div className="flex gap-4 flex-col flex-1 ">
+                <div className=" bg-gradient-to-r w-full gap-4 h-96 from-violet-500 to-fuchsia-500 p-10 flex ">
+                    <div className="cursor-pointer" onClick={returnToPrevious}>
+                        <i className="text-3xl  hover:text-fuchsia-500 transition duration-150s ease-in fa-solid pb-40 fa-chevron-left text-white" />
+                    </div>
+                    <div className="flex gap-4 flex-col pt-48 flex-1 ">
                         <p className="text-white font-semibold text-7xl">{selectedLesson.name}</p>
                         <p className="text-zinc-200 pl-2 ">Descrição: {selectedLesson.description}</p>
                     </div>
@@ -50,9 +58,7 @@ export default function Details({ params }) {
                             <span className="text-2xl">{selectedLesson.dificulty_level}</span>
                         </div>
                     </div>
-                    {/* <div className="bg-black flex items-center justify-center " style={{ width: 1000 + 'px', height: 600 + 'px' }}>
-                        <i className="fa-solid fa-play text-white font-semibold text-7xl"></i>
-                    </div> */}
+
                     <div className="flex flex-col gap-6">
                         <p className="text-3xl font-semibold">Avaliações</p>
 
