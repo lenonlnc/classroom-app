@@ -26,10 +26,8 @@ export default function Filter() {
                 <div className="bg-white shadow-md border rounded w-full h-max p-4 flex flex-col gap-4">
                     <div className="flex items-center gap-1 group cursor-pointer">
                         <div className="flex flex-col gap-2">
-                            <div className="flex items-center gap-1">
-                                <div onClick={openSubFilters} className="group-hover:text-violet-500 transition duration-150s ease-in">
-                                    Categoria
-                                </div>
+                            <div onClick={openSubFilters} className="flex items-center gap-1">
+                                <div className="group-hover:text-violet-500 transition duration-150s ease-in">Categoria</div>
                                 {subFilterOpen ? (
                                     <i className="fa-solid fa-chevron-up text-sm text-zinc-600 group-hover:text-violet-500 transition duration-150s ease-in" />
                                 ) : (
