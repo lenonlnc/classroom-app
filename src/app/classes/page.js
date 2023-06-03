@@ -1,24 +1,24 @@
 'use client'
 import Card from '@/components/genericCard'
-import Filter from '@/components/genericFilter'
+import Filter, { handleCategory } from '@/components/genericFilter'
 import Navbar from '@/components/navbar'
 import { classes } from '../../data/classes'
 import { useContext, useState } from 'react'
 import { AuthContext } from '@/contexts/context'
+import { useCustomEventListener } from 'react-custom-events'
 
 export default function () {
     const { user } = useContext(AuthContext)
-    const [activeFilter, isFilterActive] = useState(false)
-    const [isFilterSelected, selectedFilter] = useState('')
 
-    const filters = [
-        {
-            name: 'category'
-        },
-        {
-            name: 'dificulty'
+    const [activeFilter, isFilterActive] = useState(false)
+    const [filter, setFilter] = useState(null)
+
+    useCustomEventListener('select-filter', (data) => {
+        if (data) {
+            isFilterActive(true)
+            setFilter(data)
         }
-    ]
+    })
 
     return (
         <div className="flex flex-col">
@@ -35,13 +35,13 @@ export default function () {
                 {classes && (
                     <div className=" w-max grid grid-cols-5 gap-6">
                         {activeFilter
-                            ? classes.map((lesson, index) => {
-                                  if (lesson.category == 'stocks') {
-                                      return <Card key={index} name={lesson.name} description={lesson.description} rank={lesson.rank} image={lesson.image} />
+                            ? classes.map((lesson) => {
+                                  if (lesson.category == filter) {
+                                      return <Card lesson={lesson} />
                                   }
                               })
-                            : classes.map((lesson, index) => {
-                                  return <Card key={index} name={lesson.name} description={lesson.description} rank={lesson.rank} image={lesson.image} />
+                            : classes.map((lesson) => {
+                                  return <Card lesson={lesson} />
                               })}
                     </div>
                 )}

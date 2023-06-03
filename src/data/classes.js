@@ -5,8 +5,11 @@ export const classes = [
         dificulty_level: 4,
         description:
             'Esta aula visa a melhoria das habilidades do aluno das mais diversas áreas do mercado de trabalho. Possibilitando um amplo entendimento de suas respectivas áreas',
-        image: '/generic-thumb.png',
-        category: 'stocks'
+        image: '/stocks.jpeg',
+        category: 'finanças',
+        duration: 10,
+        instructor: 'Ederson Ribeiro',
+        avaliations: []
     },
     {
         id: 2,
@@ -15,7 +18,10 @@ export const classes = [
         description:
             'Esta aula visa a melhoria das habilidades do aluno das mais diversas áreas do mercado de trabalho. Possibilitando um amplo entendimento de suas respectivas áreas',
         image: '/generic-thumb.png',
-        category: 'tech'
+        category: 'tech',
+        duration: 25,
+        instructor: 'Guilherme Camillo',
+        avaliations: []
     },
     {
         id: 3,
@@ -23,8 +29,11 @@ export const classes = [
         dificulty_level: 5,
         description:
             'Esta aula visa a melhoria das habilidades do aluno das mais diversas áreas do mercado de trabalho. Possibilitando um amplo entendimento de suas respectivas áreas',
-        image: '/generic-thumb.png',
-        category: 'professionalizing'
+        image: '/marketing.png',
+        category: 'professionalizing',
+        duration: 15,
+        instructor: 'Ana Correia dos Santos',
+        avaliations: []
     },
     {
         id: 4,
@@ -32,8 +41,11 @@ export const classes = [
         dificulty_level: 5,
         description:
             'Esta aula visa a melhoria das habilidades do aluno das mais diversas áreas do mercado de trabalho. Possibilitando um amplo entendimento de suas respectivas áreas',
-        image: '/generic-thumb.png',
-        category: 'tech'
+        image: '/data-analisys.webp',
+        category: 'tech',
+        duration: 25,
+        instructor: 'Guilherme Camillo',
+        avaliations: []
     },
     {
         id: 5,
@@ -41,8 +53,11 @@ export const classes = [
         dificulty_level: 3.2,
         description:
             'Esta aula visa a melhoria das habilidades do aluno das mais diversas áreas do mercado de trabalho. Possibilitando um amplo entendimento de suas respectivas áreas',
-        image: '/generic-thumb.png',
-        category: 'professionalizing'
+        image: '/admin.jpeg',
+        category: 'professionalizing',
+        duration: 16,
+        instructor: 'Pedro Soares',
+        avaliations: []
     },
     {
         id: 6,
@@ -50,8 +65,11 @@ export const classes = [
         dificulty_level: 2,
         description:
             'Esta aula visa a melhoria das habilidades do aluno das mais diversas áreas do mercado de trabalho. Possibilitando um amplo entendimento de suas respectivas áreas',
-        image: '/generic-thumb.png',
-        category: 'languages'
+        image: '/english.webp',
+        category: 'languages',
+        duration: 60,
+        instructor: 'Altair Schultz',
+        avaliations: []
     },
     {
         id: 7,
@@ -59,8 +77,11 @@ export const classes = [
         dificulty_level: 4.5,
         description:
             'Esta aula visa a melhoria das habilidades do aluno das mais diversas áreas do mercado de trabalho. Possibilitando um amplo entendimento de suas respectivas áreas',
-        image: '/generic-thumb.png',
-        category: 'tech'
+        image: '/design.jpg',
+        category: 'tech',
+        duration: 25,
+        instructor: 'Guilherme Barbosa',
+        avaliations: []
     },
     {
         id: 8,
@@ -68,7 +89,10 @@ export const classes = [
         dificulty_level: 4.5,
         description:
             'Esta aula visa a melhoria das habilidades do aluno das mais diversas áreas do mercado de trabalho. Possibilitando um amplo entendimento de suas respectivas áreas',
-        image: '/generic-thumb.png',
-        category: 'tech'
+        image: '/ux.png',
+        category: 'tech',
+        duration: 45,
+        instructor: 'Guilherme Barbosa',
+        avaliations: []
     }
 ]

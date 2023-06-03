@@ -1,7 +1,7 @@
 'use client'
 
 import { v4 as uuid } from 'uuid'
-export async function signInRequest(email, password) {
+export async function logInRequest(email, password) {
     return {
         token: uuid(),
         user: {

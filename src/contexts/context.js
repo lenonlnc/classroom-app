@@ -4,7 +4,7 @@ import { createContext, useEffect, useState } from 'react'
 import { setCookie, parseCookies } from 'nookies'
 import { useRouter } from 'next/navigation'
 
-import { recoverUserData, signInRequest } from '@/services/auth'
+import { recoverUserData, logInRequest } from '@/services/auth'
 import { api } from '@/services/api'
 
 export const AuthContext = createContext({})
@@ -35,9 +35,7 @@ export function AuthProvider({ children }) {
             setUser(user)
             router.push('/classes')
         } catch (error) {
-            throw new Error((e) => {
-                console.log(`Authentication problem. ERR: ${e}`)
-            })
+            console.log(error)
         }
 
         if (!token) {
