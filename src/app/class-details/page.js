@@ -29,7 +29,7 @@ export default function () {
 
                         <div className="w-96 shadow-md flex bg-white hover:bg-zinc-100 transition ease-in duration-150s cursor-pointer items-center group p-4">
                             <div className="flex flex-col flex-1 gap-2">
-                                <p className="group-hover:text-violet-500 transition ease-in duration-150s">Introdução</p>
+                                <p className="group-hover:text-violet-500 transition ease-in duration-150s">Introdução à web</p>
                                 <p className="text-sm text-zinc-400">Descrição</p>
                             </div>
                             <i className="fa-solid fa-chevron-down group-hover:text-violet-500 transition ease-in duration-150s text-black font-semibold"></i>

@@ -1,4 +1,4 @@
-export default function Navbar() {
+export default function Navbar(user) {
     return (
         <div className="bg-violet-500 p-6 w-full m-0 flex items-center gap-6 px-44 justify-end">
             <i className="fa-solid fa-magnifying-glass text-white"></i>
@@ -8,10 +8,12 @@ export default function Navbar() {
                 name="search"
                 placeholder="pesquisar por curso"
             />
-            <div className="">
-                <div className="bg-violet-900 py-1 cursor-pointer rounded-full w-10 h-10 flex-items-center flex justify-center">
+            <div className="flex items-center">
+                <img className="rounded-full h-10 w-10" src={user.avatar_url} alt="" />
+
+                {/* <div className="bg-violet-900 py-1 cursor-pointer rounded-full w-10 h-10 flex-items-center flex justify-center">
                     <p className="text-white font-bold text-xl">L</p>
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -1,8 +1,19 @@
+'use client'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+export default function Card({ name, description, image, id, rank }) {
+    const router = useRouter()
+    // const [lesson, isLessonAvailable] = useState(true)
 
-export default function Card({ name, description, rank, image }) {
+    function goToLesson(e) {
+        console.log(e)
+    }
+
     return (
-        <div className="flex flex-col gap-4 shadow-md p-6 group bg-white hover:bg-violet-50 cursor-pointer transition ease-in duration-150s ">
+        <div
+            onClick={goToLesson}
+            className="flex flex-col gap-4 shadow-md p-6 group bg-white hover:bg-violet-50 cursor-pointer transition ease-in duration-150s "
+        >
             {/* image */}
             <Image className="rounded" src={image} width={384} height={150} alt="Couse image" />
 
