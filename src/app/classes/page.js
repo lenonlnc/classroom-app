@@ -17,7 +17,7 @@ export default function () {
             {/* conteúdo */}
             <div className="p-20 flex flex-col gap-10">
                 <div className="flex items-center gap-4">
-                    <p className="font-bold text-3xl flex-1">Aulas obtidas</p>
+                    <p className="font-bold text-3xl flex-1">Aulas desbloqueadas</p>
                     <Filter />
                 </div>
                 <hr className="bg-zinc-200 h-0 w-full" />
