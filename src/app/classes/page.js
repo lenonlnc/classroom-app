@@ -2,6 +2,7 @@ import Card from '@/components/genericCard'
 import Filter from '@/components/genericFilter'
 import Navbar from '@/components/navbar'
 import { courses } from '../../data/courses'
+
 export default function () {
     return (
         <div className="flex flex-col">
@@ -17,7 +18,7 @@ export default function () {
 
                 <div className=" w-max grid grid-cols-5 gap-6">
                     {courses.map((course) => {
-                        return <Card />
+                        return <Card name={course.name} description={course.description} rank={course.rank} image={course.image} />
                     })}
                 </div>
             </div>
