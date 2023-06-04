@@ -25,7 +25,7 @@ export default function () {
             {/* navbar */}
             <Navbar user={user} />
             {/* conteúdo */}
-            <div className="p-20 flex flex-col gap-10">
+            <div className="p-20 flex flex-col gap-6">
                 <div className="flex items-center gap-4">
                     <p className="font-bold text-3xl flex-1">Aulas desbloqueadas</p>
                     <Filter />
@@ -33,7 +33,7 @@ export default function () {
                 <hr className="bg-zinc-200 h-0 w-full" />
 
                 {classes && (
-                    <div className="w-max grid grid-cols-5  min-h-screen  gap-6">
+                    <div className="grid grid-cols-4 gap-6">
                         {activeFilter
                             ? classes.map((lesson) => {
                                   if (lesson.category == filter || lesson.dificulty_level == filter) {
